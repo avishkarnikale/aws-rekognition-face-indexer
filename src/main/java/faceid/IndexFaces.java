@@ -32,11 +32,6 @@ public class IndexFaces {
 
 	public static void main(String[] args) throws Exception {
 		
-		String collectionId = "MyCollection";
-		String bucket = "sonald-lti";
-		String photo = "viral.jpg";
-		String name = "Viral";
-		
 		StaticCredentialsProvider sc = StaticCredentialsProvider.create(new AwsCredentials() {
 			
 			@Override
@@ -84,7 +79,7 @@ public class IndexFaces {
 		
 	}
 
-	private static void face(String collectionId, String bucket, String photo, String name,
+	protected static void face(String collectionId, String bucket, String photo, String name,
 			StaticCredentialsProvider sc) throws JsonProcessingException {
 		RekognitionClient rekognitionClient = RekognitionClient.builder()
 				  .credentialsProvider(sc)
